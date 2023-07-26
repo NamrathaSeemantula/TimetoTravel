@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet">
+
+  <link rel="stylesheet" href="index.css">
+  <title>Time to Travel</title>
+  <script src="navigation.js" defer></script>
+  <script src="tabs.js" defer></script>
+
+</head>
+
+<body class="crew">
+  <a class="skip-to-content" href="#main">Skip to content</a>
+  <header class="primary-header flex">
+    <div>
+      <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
+    </div>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+    <nav> 
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a>
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span aria-hidden="true">01</span>Destination</a>
+            <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="activities.html"><span aria-hidden="true">02</span>Activities</a>
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="package.html"><span aria-hidden="true">03</span>Other packages</a>
+        </ul>
+    </nav>
+  </header>
+  
+  <main id="main" class="grid-container grid-container--crew flow">
+    <h1 class="numbered-title"><span aria-hidden="true">02</span> Activities</h1>
+    
+    <div class="dot-indicators flex" role="tablist" aria-label="crew member list">
+      <button aria-selected="true" aria-controls="commander-tab" role="tab" data-image="commander-image" tabindex="0"><span class="sr-only">Photography</span></button>
+      <button aria-selected="false" aria-controls="mission-tab" role="tab" data-image="mission-image" tabindex="-1"><span class="sr-only">Hiking and Trekking</span></button>
+      <button aria-selected="false" aria-controls="pilot-tab" role="tab" data-image="pilot-image" tabindex="-1"><span class="sr-only">Wildlife Safari</span></button>
+      <button aria-selected="false" aria-controls="crew-tab" role="tab" data-image="crew-image" tabindex="-1"><span class="sr-only">Sports</span></button>
+    </div>
+    
+    
+    <article class="crew-details flow" id="commander-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+        <p class="fs-700 uppercase ff-serif">Photography📸</p>
+      </header>
+      <p>Photography is the art and practice of capturing images using light-sensitive materials or electronic image sensors. It is a popular and powerful medium for expressing emotions, documenting moments, and communicating ideas across cultures and time. Photographs are not merely frozen representations of reality; they can evoke powerful emotions, tell stories, and provide insights into the world and its inhabitants.</p>
+    </article> 
+
+    
+    
+    <article hidden class="crew-details flow" id="mission-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+        <p class="fs-700 uppercase ff-serif">Hiking and Trekking</p>
+      </header>
+      <p>Hiking is a recreational activity that generally involves walking on well-marked trails or paths, which are often maintained and managed by local authorities or park services. Hiking trails can vary in difficulty, ranging from easy, leisurely walks to more challenging routes. 
+        Trekking, on the other hand, is a more challenging and adventurous activity that involves walking through remote and often less-developed regions, such as mountainous areas or wilderness with limited or no infrastructure.
+      </p>
+    </article> 
+    
+    
+    <article hidden class="crew-details flow" id="pilot-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+        <p class="fs-700 uppercase ff-serif">Wildlife Safari</p>
+      </header>
+      <p>A wildlife safari is an exhilarating and immersive experience that allows travelers to observe and photograph wild animals in their natural habitats. It is a form of eco-tourism that promotes conservation efforts while providing an opportunity to witness diverse wildlife up close. Wildlife safaris can take place in various locations around the world, including national parks, game reserves, and protected wildlife sanctuaries.</p>
+    </article> 
+    
+    
+    <article hidden class="crew-details flow" id="crew-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+        <p class="fs-700 uppercase ff-serif">Sports</p>
+      </header>
+      <p>Sports are physical activities or games that involve individual or team competition, organized to entertain and engage participants and spectators. They have been an integral part of human culture for centuries, providing not only entertainment but also promoting physical fitness, teamwork, discipline, and sportsmanship. Sports can be played at both recreational and professional levels and cover a wide range of activities with diverse rules and objectives.</p>
+    </article> 
+    
+    <picture id="commander-image">
+      <img src="assets/activities/photo.jpg" >
+    </picture>
+    <picture hidden id="mission-image">
+      <img src="assets/activities/ht.jpg" >
+    </picture>
+    <picture hidden id="pilot-image">
+      <img src="assets/activities/wildlife.jpg" >
+    </picture>
+    <picture hidden id="crew-image">
+      <img src="assets/activities/sports.jpg" >
+    </picture>
+    
+
+  </main>
+</body>
+</html>
